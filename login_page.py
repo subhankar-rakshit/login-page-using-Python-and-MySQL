@@ -52,7 +52,7 @@ class login_page:
             messagebox.showerror("Error!","All fields are required",parent=self.window)
         else:
             try:
-                connection=pymysql.connect(host="localhost",user="pyseek8",password="Python@8",database="student_database")
+                connection=pymysql.connect(host="localhost",user="type_username",password="type_your_password",database="student_database")
                 cur = connection.cursor()
                 cur.execute("select * from student_register where email=%s and password=%s",(self.email_entry.get(),self.password_entry.get()))
                 row=cur.fetchone()
@@ -73,7 +73,7 @@ class login_page:
             messagebox.showerror("Error!", "Please enter your Email Id",parent=self.window)
         else:
             try:
-                connection = pymysql.connect(host="localhost", user="pyseek8", password="Python@8", database="student_database")
+                connection = pymysql.connect(host="localhost", user="type_username",password="type_your_password", database="student_database")
                 cur = connection.cursor()
                 cur.execute("select * from student_register where email=%s", self.email_entry.get())
                 row=cur.fetchone()
@@ -128,7 +128,7 @@ class login_page:
             messagebox.showerror("Error!", "Please fill the all entry field correctly")
         else:
             try:
-                connection = pymysql.connect(host="localhost",user="pyseek8",password="Python@8",database="student_database")
+                connection = pymysql.connect(host="localhost",user="type_username",password="type_your_password",database="student_database")
                 cur = connection.cursor()
                 cur.execute("select * from student_register where email=%s and question=%s and answer=%s", (self.email_entry.get(),self.sec_ques.get(),self.ans.get()))
                 row=cur.fetchone()
