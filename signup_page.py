@@ -67,7 +67,7 @@ class SignUp:
 
         else:
             try:
-                connection = pymysql.connect(host="localhost", user="pyseek8", password="Python@8", database="student_database")
+                connection = pymysql.connect(host="localhost", user="type_username", password="type_your_password", database="student_database")
                 cur = connection.cursor()
                 cur.execute("select * from student_register where email=%s",self.email_txt.get())
                 row=cur.fetchone()
