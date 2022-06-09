@@ -86,8 +86,8 @@ class SignUp:
                     connection.close()
                     messagebox.showinfo("Congratulations!","Register Successful",parent=self.window)
                     self.reset_fields()
-            except Exception as e:
-                messagebox.showerror("Error!",f"Error due to {str(e)}",parent=self.window)
+            except Exception as es:
+                messagebox.showerror("Error!",f"Error due to {es}",parent=self.window)
 
     def reset_fields(self):
         self.fname_txt.delete(0, END)
